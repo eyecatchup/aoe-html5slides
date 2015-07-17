@@ -829,8 +829,8 @@ article.smaller {
 /* ===== SLIDE CONTENT ===== */
 .logoslide {
   img {
-    width: 650px;
-    height: 170px;
+    width: 800px;
+    height: 427px;
   }
 }
 
@@ -852,7 +852,6 @@ article.smaller {
 }
 
 .thank-you-slide {
-  background: $brand-blue !important;
   color: white;
 
   h2 {
@@ -903,12 +902,22 @@ aside.gdbar {
   }
 
   img {
-    width: 85px;
     height: 85px;
     position: absolute;
     right: 0;
     margin: 5px 15px;
   }
+
+  &.gdbar-aoe {
+      img {
+         height: 70px;
+         margin: 11px 15px;
+      }
+  }
+}
+
+slide:not(.title-slide) > aside.gdbar:not(.gdbar-aoe) {
+    width: 85px;
 }
 
 .title-slide {
