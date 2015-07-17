@@ -539,12 +539,12 @@ q {
   line-height: 72px;
 
   &:before {
-    content: '“';
+    content: '"';
     position: absolute;
     margin-left: -0.5em;
   }
   &:after {
-    content: '”';
+    content: '"';
     position: absolute;
     margin-left: 0.1em;
   }
@@ -907,7 +907,7 @@ aside.gdbar {
     height: 85px;
     position: absolute;
     right: 0;
-    margin: 8px 15px;
+    margin: 5px 15px;
   }
 }
 
