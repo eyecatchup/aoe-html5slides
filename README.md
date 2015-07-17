@@ -46,7 +46,7 @@ pre {
 }
 </style>
 
-<h1><img src="images/io2012_logo.png"> HTML5 Slide Template</h1>
+<h1><img src="images/Logo_noclaim_orange_small.png"> HTML5 Slide Template</h1>
 
 ## Configuring the slides
 
@@ -55,11 +55,11 @@ Some of the customizations include the title, Analytics tracking ID, speaker
 information (name, social urls, blog), web fonts to load, themes, and other
 general behavior.
 
-### Customizing the `#io12` hash
+### Customizing the `#AOEpeople` hash
 
-The bottom of the slides include `#io12` by default. If you'd like to change
-this, please update the variable `$social-tags: '#io12';` in
-[`/theme/scss/default.scss`](theme/scss/default.scss).
+The bottom of the slides include `#AOEpeople` by default. If you'd like to change
+this, please update the variable `$social-tags: '#AOEpeople';` in
+[`/theme/scss/_variables.scss`](theme/scss/_variables.scss).
 
 See the next section on "Editing CSS" before you go editing things.
 
@@ -84,7 +84,7 @@ First, install compass:
 Next, you'll want to watch for changes to the exiting .scss files in [`/theme/scss`](theme/scss)
 and any new one you add:
 
-    $ cd io-2012-slides
+    $ cd aoe-html5slides
     $ compass watch
 
 This command automatically recompiles the .scss file when you make a change.
@@ -107,7 +107,7 @@ The slides can be run locally from `file://` making development easy :)
 If at some point you should need a web server, use [`serve.sh`](serve.sh). It will
 launch a simple one and point your default browser to [`http://localhost:8000/template.html`](http://localhost:8000/template.html):
 
-    $ cd io-2012-slides
+    $ cd aoe-html5slides
     $ ./serve.sh
 
 You can also specify a custom port:
