@@ -1,8 +1,8 @@
 var SLIDE_CONFIG = {
   // Slide settings
   settings: {
-    title: 'Git Workshop',
-    subtitle: 'Teil 1',
+    title: 'AOE HTML5 presentation slides',
+    subtitle: 'Super important subtitle',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'
@@ -22,12 +22,12 @@ var SLIDE_CONFIG = {
 
   // Author information
   presenters: [{
-    name: 'Stephan Schmitz',
+    name: 'Firstname Lastname',
     company: 'Developer<br>AOE GmbH',
-    gplus: 'https://google.com/+StephanSchmitz',
-    twitter: '@bext0n',
+    gplus: 'https://google.com/+YourVanityURL',
+    twitter: '@your-handle',
     www: 'https://www.aoe.com',
-    github: 'https://github.com/eyecatchup'
+    github: 'https://github.com/AOEpeople'
   }/*, {
     name: 'Second Name',
     company: 'Job Title, Google',
