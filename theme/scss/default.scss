@@ -19,6 +19,18 @@
 /**
  * Theme Styles
  */
+
+@font-face {
+   font-family: 'ClanOT-Thin';
+   src: url('../../fonts/ClanOT-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ClanOT-Thin.otf')  format('opentype'),
+        url('../../fonts/ClanOT-Thin.woff') format('woff'),
+        url('../../fonts/ClanOT-Thin.ttf')  format('truetype'),
+        url('../../fonts/ClanOT-Thin.svg#ClanOT-Thin') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
 ::selection {
   color: white;
   background-color: $brand-yellow;
@@ -57,6 +69,7 @@
 
 body {
   background: $aoe-orange;
+  font-family: 'ClanOT-Thin' !important;
 }
 
 .aoe-gradient {
@@ -74,6 +87,7 @@ slide:not(.title-slide) > hgroup {
     left: 0;
     width: 100%;
     padding: .7em;
+    padding-top: 22px;
 
     h2 {
         font-weight: normal;
@@ -82,7 +96,7 @@ slide:not(.title-slide) > hgroup {
 
 slides > slide {
   display: none;
-  font-family: 'Open Sans', Arial, sans-serif;
+  font-family: 'ClanOT-Thin', Arial, sans-serif;
   font-size: 26px;
   color: $gray-3;
   //@include background(linear-gradient(white, white 85%, $gray-1));
