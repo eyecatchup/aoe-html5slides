@@ -56,7 +56,7 @@ run watch with the style output flag:
 $ compass watch -s expanded
 ```
 
-*Note:* You should not need to edit [`_base.scss`](theme/scss/_base.scss).
+**Note:** You should not need to edit [`_base.scss`](theme/scss/_base.scss).
 
 ---
 
@@ -80,7 +80,7 @@ You can also specify a custom port:
 $ ./serve.sh 8080
 ```
 
-On Windows, to start the simple webserver, issue the following command instead:
+On Windows, to start the web server, issue the following command instead:
 
 ```
 # For Python 2.x
@@ -115,7 +115,7 @@ pip install markdown
 ```
 
 NOTE: Windows and Python are not the best friends. If you want to generate the slides from your md 
-files in Windows, you must change the paths in the `render.py` script to use *absolute paths*!
+files in Windows, you must change the paths in the `render.py` script to use **absolute paths**!
 
 ---
 
