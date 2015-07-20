@@ -58,7 +58,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Übersicht - Workshop Teil 1</h2>
+      <h2>Agenda - Workshop Teil 1</h2>
     </hgroup>
     <article>
       <ul class="build fade">
@@ -89,7 +89,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Basics - Intro Git</h2>
+      <h2>Basics > Intro Git</h2>
     </hgroup>
     <article>
       <p>Git wurde 2005 von Linus Torvalds, für die Versionsverwaltung der Entwicklung des Linux Kernel's, entwickelt.</p>
@@ -105,7 +105,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Basics - Zentrale Versionierung (CVCS)</h2>
+      <h2>Basics > Intro Git > Zentrale Versionierung (CVCS)</h2>
     </hgroup>
     <article>
       <img style="float:right;margin-left:10px;" src="assets/git-workshop/cvcs.png" />
@@ -121,7 +121,7 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Basics - Verteilte Versionierung (DVCS)</h2>
+      <h2>Basics > Intro Git > Verteilte Versionierung (DVCS)</h2>
     </hgroup>
     <article>
       <img style="float:right;margin-left:10px;" src="assets/git-workshop/dvcs.png" />
@@ -130,6 +130,40 @@ URL: https://code.google.com/p/io-2012-slides
             <li>In Git, Mercurial etc. wird nicht von einem <b>zentralen</b> Repository <em>"ausgecheckt"</em>. Nicht-lokale Repositories (aka "remotes") werden "geklont", bzw. Änderungen eines <em>"remotes" werden "gepullt".</em></li>
             <li>Lokale Repositories stellen eine vollständige Kopie eines geklonten Repositories dar.<br /><em>("Yours" is just as good as "theirs".)</em></li>
             <li>Ein Großteil der Änderungen (commits, merges, branching etc) finden lokal statt und werden auch <b>lokal versioniert</b>.<br />Änderungen können im Anschluß an eine Kopie auf einem Server <em>"gepusht"</em> werden.</li>
+          </ul>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Git Arbeitsbereiche</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/git-local-operations.png" />
+      <div>
+          <p>In Git kann eine Datei in folgenden Ständen existieren:</p>
+          <ul class="build fade">
+            <li>In deinem lokalen Repository => <b>committed</b></li>
+            <li>"Ausgecheckt" und bearbeitet; aber (noch) nicht committed => <b>working copy</b></li>
+            <li>Oder in der "Staging-Area" => für den Commit <b>"geflaggt"</b></li>
+          </ul>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Basis Git Workflow</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/git-file-status-lifecycle.png" />
+      <div>
+          <p>Der Standard-Arbeitsablauf ist:</p>
+          <ul class="build fade">
+            <li>1.) Datei(en) <b>>> bearbeiten <<</b>.</li>
+            <li>2.) Verarbeitete Datei(en) <b>>> stagen <<</b>.<br /><span class="small">(Erstellt einen Snapshot des aktuellen Standes.)</small></li>
+            <li>3.) "Gestagete" Datei(en) <b>>> committen <<</b>.<br /><span class="small">(Speichert den aktuellen Snapshot der Staging-Area dauerhaft in der Versionshistorie des Repositories.)</span></li>
           </ul>
       </div>
     </article>
