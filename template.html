@@ -58,19 +58,114 @@ URL: https://code.google.com/p/io-2012-slides
 
   <slide>
     <hgroup>
-      <h2>Slide with Bullets</h2>
+      <h2>Agenda - Workshop Teil 1</h2>
     </hgroup>
     <article>
-      <ul>
-        <li>Titles are formatted as Open Sans with bold applied and font size is set at 45</li>
-        <li>Title capitalization is title case
+      <ul class="build fade">
+        <li>Basics
           <ul>
-            <li>Subtitle capitalization is title case</li>
+            <li>Intro Git (Unterschiede zwischen DCVS und CCVS)</li>
+            <li>Git Software</li>
+            <li>Einrichtung Git-Client</li>
           </ul>
         </li>
-        <li>Subtitle capitalization is title case</li>
-        <li>Titles and subtitles should never have a period at the end</li>
+        <li>Repositories
+          <ul>
+            <li>Intro Repos (Lokal vs. Remote)</li>
+            <li>Repositories anlegen (Unterschied zwischen --bare, --shared, etc.)</li>
+            <li>Mit mehreren Repositories arbeiten</li>
+          </ul>
+        </li>
+        <li>Branches
+          <ul>
+            <li>Intro Branches (Unterschied zu SVN)</li>
+            <li>Intro Branching-Modelle</li>
+            <li>Gitflow</li>
+          </ul>
+        </li>
       </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git</h2>
+    </hgroup>
+    <article>
+      <p>Git wurde 2005 von Linus Torvalds, für die Versionsverwaltung der Entwicklung des Linux Kernel's, entwickelt.</p>
+      <p>Ziele von Torvalds für Git waren:</p>
+      <ul class="build fade">
+        <li>Geschwindikgeit</li>
+        <li>Unterstützung nicht-linearer Entwicklung (tausende parallele Branches)</li>
+        <li>Vollständig <b>verteilt</b></li>
+        <li>Die Möglichkeit große Projekte effizient zu verwalten</li>
+      </ul>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Zentrale Versionierung (CVCS)</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/cvcs.png" />
+      <div>
+          <ul class="build fade">
+            <li>In SVN, CVS, Perforce etc. gibt es jeweils ein <b>zentrales</b>, auf einem Server gehostetes Repository, welches den offiziellen Applikations-Code enthält. Der Server alleine verwaltet hierbei die History.</li>
+            <li>Man <em>"checkt"</em> eine lokale Kopie aus und bearbeitet eine/mehrere Datei(en). Diese Änderungen sind unversioniert.</li>
+            <li>Wenn lokale Änderungen abgeschlossen sind, werden diese im zentralen Server <em>"eingecheckt"</em>, wodurch sich die Version des Repositories inkrementell erhöht.</li>
+          </ul>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Verteilte Versionierung (DVCS)</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/dvcs.png" />
+      <div>
+          <ul class="build fade">
+            <li>In Git, Mercurial etc. wird nicht von einem <b>zentralen</b> Repository <em>"ausgecheckt"</em>. Nicht-lokale Repositories (aka "remotes") werden "geklont", bzw. Änderungen eines <em>"remotes" werden "gepullt".</em></li>
+            <li>Lokale Repositories stellen eine vollständige Kopie eines geklonten Repositories dar.<br /><em>("Yours" is just as good as "theirs".)</em></li>
+            <li>Ein Großteil der Änderungen (commits, merges, branching etc) finden lokal statt und werden auch <b>lokal versioniert</b>.<br />Änderungen können im Anschluß an eine Kopie auf einem Server <em>"gepusht"</em> werden.</li>
+          </ul>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Git Arbeitsbereiche</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/git-local-operations.png" />
+      <div>
+          <p>In Git kann eine Datei in folgenden Ständen existieren:</p>
+          <ul class="build fade">
+            <li>In deinem lokalen Repository => <b>committed</b></li>
+            <li>"Ausgecheckt" und bearbeitet; aber (noch) nicht committed => <b>working copy</b></li>
+            <li>Oder in der "Staging-Area" => für den Commit <b>"geflaggt"</b></li>
+          </ul>
+      </div>
+    </article>
+  </slide>
+
+  <slide>
+    <hgroup>
+      <h2>Basics > Intro Git > Basis Git Workflow</h2>
+    </hgroup>
+    <article>
+      <img style="float:right;margin-left:10px;" src="assets/git-workshop/git-file-status-lifecycle.png" />
+      <div>
+          <p>Der Standard-Arbeitsablauf ist:</p>
+          <ul class="build fade">
+            <li>1.) Datei(en) <b>>> bearbeiten <<</b>.</li>
+            <li>2.) Verarbeitete Datei(en) <b>>> stagen <<</b>.<br /><span class="small">(Erstellt einen Snapshot des aktuellen Standes.)</small></li>
+            <li>3.) "Gestagete" Datei(en) <b>>> committen <<</b>.<br /><span class="small">(Speichert den aktuellen Snapshot der Staging-Area dauerhaft in der Versionshistorie des Repositories.)</span></li>
+          </ul>
+      </div>
     </article>
   </slide>
 
@@ -349,7 +444,7 @@ function helloWorld(world) {
   </slide>
 
   <slide class="segue dark quote nobackground">
-    <aside class="gdbar-aoe gdbar right bottom"><img src="images/AOE-Logo_white-bg_small.png"></aside>
+    <aside class="gdbar-aoe gdbar right bottom"><img src="images/AOE-Logo_dark-bg_small.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <q>
         This is an example of quote text.
@@ -377,7 +472,7 @@ function helloWorld(world) {
   </slide>
 
   <slide class="thank-you-slide segue nobackground">
-    <aside class="gdbar-aoe gdbar right"><img src="images/AOE-Logo_white-bg_small.png"></aside>
+    <aside class="gdbar-aoe gdbar right"><img src="images/AOE-Logo_dark-bg_small.png"></aside>
     <article class="flexbox vleft auto-fadein">
       <h2>&lt;thank you!&gt;</h2>
       <p>Get in touch:</p>
