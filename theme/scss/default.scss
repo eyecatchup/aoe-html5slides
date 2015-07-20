@@ -149,12 +149,6 @@ slides > slide {
     background: $gray-4 !important;
   }
 
-  &.aoe-dark-gradient {
-      background-color: $aoe-gray-1;
-      background-image: -webkit-linear-gradient(top, $aoe-gray-1, $aoe-gray-2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-      background-image:         linear-gradient(to bottom, $aoe-gray-1, $aoe-gray-2); /* Chrome 26, Firefox 16+, IE 10+, Opera */
-  }
-
   &:not(.nobackground) {
     //background: white url(../../images/google_developers_icon_128.png) ($brand-small-icon-size * 2) 98% no-repeat;
     //@include background-size($brand-small-icon-size $brand-small-icon-size);
@@ -225,6 +219,13 @@ slides > slide {
       height: 98%;
     }
   }
+}
+
+html.aoe-gradient slide {
+    background: $aoe-gray-1;
+    background-color: $aoe-gray-1;
+    background-image: -webkit-linear-gradient(top, $aoe-gray-1, $aoe-gray-2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:         linear-gradient(to bottom, $aoe-gray-1, $aoe-gray-2); /* Chrome 26, Firefox 16+, IE 10+, Opera */
 }
 
 slides.layout-faux-widescreen > slide {
