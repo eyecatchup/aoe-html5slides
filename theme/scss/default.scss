@@ -553,6 +553,7 @@ q {
 
 slide.fill {
   background-repeat: no-repeat;
+  background-size: cover !important;
   @include border-radius($slide-border-radius);
   @include background-size(cover);
 }
