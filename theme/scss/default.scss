@@ -895,9 +895,13 @@ aside.gdbar {
   left: -1px;
   top: 125px;
   @include border-radius(0 10px 10px 0);
-  @include background(linear-gradient(left, $gray-1, $gray-1) no-repeat);
+  @include background(linear-gradient(bottom, $gray-1, $gray-1) no-repeat);
   @include background-size(0% 100%);
   @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
+
+  &.gdbar-aoe {
+      @include background(linear-gradient(bottom, $aoe-orange, $aoe-orange-light) no-repeat);
+  }
 
   &.right {
     right: 0;
