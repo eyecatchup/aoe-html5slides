@@ -24,7 +24,7 @@ var SLIDE_CONFIG = {
   presenters: [{
     name: 'Stephan Schmitz',
     company: 'Developer<br>AOE GmbH',
-    gplus: 'http://plus.google.com/+StephanSchmitz',
+    gplus: 'https://google.com/+StephanSchmitz',
     twitter: '@bext0n',
     www: 'https://www.aoe.com',
     github: 'https://github.com/eyecatchup'
