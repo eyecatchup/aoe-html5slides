@@ -115,7 +115,8 @@ pip install markdown
 ```
 
 NOTE: Windows and Python are not the best friends. If you want to generate the slides from your md 
-files in Windows, you must change the paths in the `render.py` script to use **absolute paths**!
+files in Windows, you must change the paths in the [`render.py`](scripts/md/render.py) script to 
+use **absolute paths**!
 
 ---
 
