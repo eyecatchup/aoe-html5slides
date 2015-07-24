@@ -67,13 +67,14 @@
   background: transparent;
 }
 
-body {
-  background: $aoe-orange;
+html, body {
+  background: $aoe-orange-light;
+  background-color: $aoe-orange-light;
   font-family: 'ClanOT-Thin' !important;
 }
 
 .aoe-gradient {
-    background-color: $aoe-orange;
+    background-color: $aoe-orange-light;
     background-image: -webkit-linear-gradient(top, $aoe-orange, $aoe-orange-light); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
     background-image:         linear-gradient(to bottom, $aoe-orange, $aoe-orange-light); /* Chrome 26, Firefox 16+, IE 10+, Opera */
 }
@@ -567,6 +568,7 @@ q {
 
 slide.fill {
   background-repeat: no-repeat;
+  background-size: cover !important;
   @include border-radius($slide-border-radius);
   @include background-size(cover);
 }
