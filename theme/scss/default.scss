@@ -21,14 +21,14 @@
  */
 
 @font-face {
-    font-family: 'ClanOT-Thin';
-    src: url('../../fonts/ClanOT-Thin.eot?#iefix') format('embedded-opentype'),
-         url('../../fonts/ClanOT-Thin.otf')  format('opentype'),
-         url('../../fonts/ClanOT-Thin.woff') format('woff'),
-         url('../../fonts/ClanOT-Thin.ttf')  format('truetype'),
-         url('../../fonts/ClanOT-Thin.svg#ClanOT-Thin') format('svg');
-    font-weight: normal;
-    font-style: normal;
+   font-family: 'ClanOT-Thin';
+   src: url('../../fonts/ClanOT-Thin.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ClanOT-Thin.otf')  format('opentype'),
+        url('../../fonts/ClanOT-Thin.woff') format('woff'),
+        url('../../fonts/ClanOT-Thin.ttf')  format('truetype'),
+        url('../../fonts/ClanOT-Thin.svg#ClanOT-Thin') format('svg');
+   font-weight: normal;
+   font-style: normal;
 }
 
 ::selection {
@@ -235,7 +235,7 @@ slides > slide {
   }
 }
 
-html.aoe-gradient slide {
+.aoe-gradient slide {
     background: $aoe-gray-1;
     background-color: $aoe-gray-1;
     background-image: -webkit-linear-gradient(top, $aoe-gray-1, $aoe-gray-2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
@@ -567,7 +567,6 @@ q {
 
 slide.fill {
   background-repeat: no-repeat;
-  background-size: cover !important;
   @include border-radius($slide-border-radius);
   @include background-size(cover);
 }
@@ -850,6 +849,10 @@ article.smaller {
   }
 }
 
+span.small {
+    font-size: 80%;
+}
+
 .segue {
   padding: $slide-left-right-padding $slide-left-right-padding * 2;
 
@@ -895,13 +898,9 @@ aside.gdbar {
   left: -1px;
   top: 125px;
   @include border-radius(0 10px 10px 0);
-  @include background(linear-gradient(bottom, $gray-1, $gray-1) no-repeat);
+  @include background(linear-gradient(left, $gray-1, $gray-1) no-repeat);
   @include background-size(0% 100%);
   @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
-
-  &.gdbar-aoe {
-      @include background(linear-gradient(bottom, $aoe-orange, $aoe-orange-light) no-repeat);
-  }
 
   &.right {
     right: 0;
