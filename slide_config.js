@@ -3,6 +3,7 @@ var SLIDE_CONFIG = {
   settings: {
     title: 'AOE HTML5 presentation slides',
     subtitle: 'Super important subtitle',
+    date: '01.01.2000',
     //eventInfo: {
     //  title: 'Google I/O',
     //  date: '6/x/2013'

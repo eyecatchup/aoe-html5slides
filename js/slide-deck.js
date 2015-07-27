@@ -128,11 +128,11 @@ SlideDeck.prototype.addEventListeners_ = function() {
   //   'msTransition': 'MSTransitionEnd',
   //   'transition': 'transitionend'
   // };
-  // 
+  //
   // // Find the correct transitionEnd vendor prefix.
   // window.transEndEventName = transEndEventNames[
   //     Modernizr.prefixed('transition')];
-  // 
+  //
   // // When slides are done transitioning, kickoff loading iframes.
   // // Note: we're only looking at a single transition (on the slide). This
   // // doesn't include autobuilds the slides may have. Also, if the slide
@@ -327,6 +327,13 @@ SlideDeck.prototype.loadConfig_ = function(config) {
 
   if (settings.subtitle) {
     document.querySelector('[data-config-subtitle]').innerHTML = settings.subtitle;
+  }
+
+  if (settings.date) {
+    var slds = document.querySelectorAll('[data-date]');
+    for (var i, i = 0;  i < slds.length; i++) {
+        slds[i].setAttribute('data-date', settings.date);
+    }
   }
 
   if (this.config_.presenters) {
@@ -571,7 +578,7 @@ SlideDeck.prototype.updateSlides_ = function(opt_dontPush) {
   this.triggerSlideEvent('slideenter', curSlide);
 
 // window.setTimeout(this.disableSlideFrames_.bind(this, curSlide - 2), 301);
-// 
+//
 // this.enableSlideFrames_(curSlide - 1); // Previous slide.
 // this.enableSlideFrames_(curSlide + 1); // Current slide.
 // this.enableSlideFrames_(curSlide + 2); // Next slide.

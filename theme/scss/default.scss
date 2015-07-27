@@ -21,6 +21,17 @@
  */
 
 @font-face {
+   font-family: 'ClanOT-News';
+   src: url('../../fonts/ClanOT-News.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/ClanOT-News.otf')  format('opentype'),
+        url('../../fonts/ClanOT-News.woff') format('woff'),
+        url('../../fonts/ClanOT-News.ttf')  format('truetype'),
+        url('../../fonts/ClanOT-News.svg#ClanOT-News') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
    font-family: 'ClanOT-Thin';
    src: url('../../fonts/ClanOT-Thin.eot?#iefix') format('embedded-opentype'),
         url('../../fonts/ClanOT-Thin.otf')  format('opentype'),
@@ -31,9 +42,31 @@
    font-style: normal;
 }
 
+@font-face {
+   font-family: 'DIN-Regular';
+   src: url('../../fonts/DIN-Regular.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/DIN-Regular.otf')  format('opentype'),
+        url('../../fonts/DIN-Regular.woff') format('woff'),
+        url('../../fonts/DIN-Regular.ttf')  format('truetype'),
+        url('../../fonts/DIN-Regular.svg#DIN-Regular') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
+@font-face {
+   font-family: 'DIN-Light';
+   src: url('../../fonts/DIN-Light.eot?#iefix') format('embedded-opentype'),
+        url('../../fonts/DIN-Light.otf')  format('opentype'),
+        url('../../fonts/DIN-Light.woff') format('woff'),
+        url('../../fonts/DIN-Light.ttf')  format('truetype'),
+        url('../../fonts/DIN-Light.svg#DIN-Light') format('svg');
+   font-weight: normal;
+   font-style: normal;
+}
+
 ::selection {
   color: white;
-  background-color: $brand-yellow;
+  background-color: $aoe-yellow;
   @include text-shadow(none);
 }
 
@@ -68,37 +101,39 @@
 }
 
 html, body {
-  background: $aoe-orange-light;
-  background-color: $aoe-orange-light;
-  font-family: 'ClanOT-Thin' !important;
+  background: $aoe-yellow;
+  background-color: $aoe-yellow;
+  @include text-shadow(0 1px 1px rgba(0,0,0,.1));
 }
 
 .aoe-gradient {
-    background-color: $aoe-orange-light;
-    background-image: -webkit-linear-gradient(top, $aoe-orange, $aoe-orange-light); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-    background-image:         linear-gradient(to bottom, $aoe-orange, $aoe-orange-light); /* Chrome 26, Firefox 16+, IE 10+, Opera */
+    background-color: $aoe-yellow;
+    background-image: -webkit-linear-gradient(top, $aoe-orange, $aoe-yellow); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:         linear-gradient(to bottom, $aoe-orange, $aoe-yellow); /* Chrome 26, Firefox 16+, IE 10+, Opera */
 }
 
 slide:not(.nobackground) > hgroup,
 slide:not(.segue) > hgroup,
 slide:not(.title-slide) > hgroup {
-    background: $aoe-gray-3;
+    background: $aoe-light-gray;
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     padding: .7em;
     padding-top: 22px;
+    font-weight: 400;
 
     h2 {
-        font-weight: normal;
+        font-weight: 600;
     }
 }
 
 slides > slide {
   display: none;
-  font-family: 'ClanOT-Thin', Arial, sans-serif;
-  font-size: 26px;
+  font-family: 'ClanOT-News', Arial, sans-serif;
+  font-size: 24px;
+  font-weight: 400;
   color: $gray-3;
   //@include background(linear-gradient(white, white 85%, $gray-1));
   //background-color: white;
@@ -170,23 +205,25 @@ slides > slide {
 
     &:before {
       font-size: 12pt;
-      content: $social-tags;
+      content: ' ';
       position: absolute;
-      bottom: $slide-top-bottom-padding / 2;
-      left: $slide-left-right-padding;
-      background: url(../../images/Logo_claim_icon_white.png) no-repeat 0 50%;
+      bottom: 25px;
+      right: 35px;
+      background: url(../../images/cube-light-blue.png) no-repeat 0 10px;
       @include background-size($brand-small-icon-size $brand-small-icon-size);
-      padding-left: $brand-small-icon-size + 10;
-      height: $brand-small-icon-size;
+      padding-left: 30px;
+      height: 40px;
       line-height: 1.9;
     }
     &:after {
+      font-family: 'DIN-Light';
       font-size: 12pt;
-      content: attr(data-slide-num) '/' attr(data-total-slides);
+      color: $aoe-white;
+      content: '\00a9\00a0\00a0\00a0\00a0' attr(data-slide-num) '\00a0\00a0|\00a0\00a0' attr(data-date); // \00a9 = &copy;, \00a0 = &nbsp;
       position: absolute;
       bottom: $slide-top-bottom-padding / 2;
-      right: $slide-left-right-padding;
-      line-height: 1.9;
+      left: $slide-left-right-padding;
+      line-height: 1.2;
     }
   }
 
@@ -237,10 +274,10 @@ slides > slide {
 }
 
 .aoe-gradient slide {
-    background: $aoe-gray-1;
-    background-color: $aoe-gray-1;
-    background-image: -webkit-linear-gradient(top, $aoe-gray-1, $aoe-gray-2); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
-    background-image:         linear-gradient(to bottom, $aoe-gray-1, $aoe-gray-2); /* Chrome 26, Firefox 16+, IE 10+, Opera */
+    background: $aoe-gray;
+    background-color: $aoe-gray;
+    background-image: -webkit-linear-gradient(top, $aoe-gray, $aoe-dark-gray); /* Chrome 10-25, iOS 5+, Safari 5.1+ */
+    background-image:         linear-gradient(to bottom, $aoe-gray, $aoe-dark-gray); /* Chrome 26, Firefox 16+, IE 10+, Opera */
 }
 
 slides.layout-faux-widescreen > slide {
@@ -307,12 +344,12 @@ b {
 }
 
 a {
-  color: $brand-blue-secondary2;
+  color: $aoe-yellow;
   text-decoration: none;
-  border-bottom: 1px solid rgba(42, 124, 223, 0.5);
+  border-bottom: 1px solid rgba($aoe-yellow, 0.5);
 
   &:hover {
-    color: black !important;
+    color: $aoe-orange !important;
   }
 }
 
@@ -321,10 +358,10 @@ h1, h2, h3 {
 }
 
 h2 {
-  font-size: 32px;
-  line-height: 32px;
-  letter-spacing: -1px;
+  font-size: 30px;
+  line-height: 60px;
   color: $gray-4;
+  font-family: 'ClanOT-News' !important;
 }
 
 h3 {
@@ -335,10 +372,13 @@ h3 {
   color: $gray-3;
 }
 
+
+
 ul {
   margin-left: 1.2em;
   margin-bottom: 1em;
   position: relative;
+  list-style: none;
 
   li {
     margin-bottom: 0.5em;
@@ -355,10 +395,13 @@ ul {
   }
 
   > li:before {
-    content: '\00B7';
+    content: '\002022\00a0';
     margin-left: -1em;
     position: absolute;
     font-weight: 600;
+    color: $aoe-orange;
+    font-size: 80%;
+    line-height: 1.5;
   }
 
   ul {
@@ -525,13 +568,20 @@ table {
   }
 
   tr:nth-child(odd) {
-    background-color: $gray-1;
+    background-color: $aoe-white;
+    color: $aoe-dark-gray;
+  }
+
+  tr:nth-child(even) {
+    background-color: $aoe-light-blue;
+    color: $aoe-dark-gray;
   }
 
   th {
     color: white;
     font-size: 18px;
-    @include background(linear-gradient(top, $brand-blue 40%, $brand-blue-secondary2 80%) no-repeat);
+    background-color: $aoe-orange;
+    //@include background(linear-gradient(top, $aoe-orange, $aoe-yellow) no-repeat);
   }
 
   td, th {
@@ -540,8 +590,9 @@ table {
   }
 
   td.highlight {
-    color: $gray-4;
-    @include background(linear-gradient(top, $brand-yellow 40%, $brand-yellow-secondary2 80%) no-repeat);
+    color: white;
+    background-color: $aoe-gray;
+    //@include background(linear-gradient(top, $aoe-orange 40%, $aoe-yellow 80%) no-repeat);
   }
 
   &.rows {
@@ -905,7 +956,7 @@ aside.gdbar {
   @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
 
   &.gdbar-aoe {
-    @include background(linear-gradient(bottom, $aoe-orange, $aoe-orange-light) no-repeat);
+    @include background(linear-gradient(bottom, $aoe-orange, $aoe-yellow) no-repeat);
   }
 
   &.right {
@@ -953,7 +1004,7 @@ slide:not(.title-slide) > aside.gdbar:not(.gdbar-aoe) {
     h1 {
       font-size: 65px;
       line-height: 1.4;
-      letter-spacing: -3px;
+      letter-spacing: -1px;
       color: white;
     }
 
