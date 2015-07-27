@@ -124,6 +124,38 @@ slide:not(.title-slide) > hgroup {
     padding-top: 22px;
     font-weight: 400;
 
+    &.new-chapter {
+        background: $aoe-yellow;
+
+        > h2 {
+            margin-left: 170px;
+        }
+
+        > h2::before {
+            content: ' | ';
+            position: absolute;
+            background: url(../../images/AOE-Logo_dark-bg_small3.png) no-repeat 0 0;
+            width: 120px;
+            height: 60px;
+            background-size: 120px;
+            top: 21px;
+            left: 20px;
+            padding-left:140px;
+        }
+
+        > h2::after {
+            content: ' ';
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            border-width: 11px 15px 0 15px;
+            border-color: $aoe-yellow transparent transparent transparent;
+            top: 98px;
+            left: 27px;
+        }
+    }
+
     h2 {
         font-weight: 600;
     }
@@ -956,7 +988,10 @@ aside.gdbar {
   @include transition(all 0.5s ease-out 0.5s); /* Better to transition only on background-size, but not sure how to do that with the mixin. */
 
   &.gdbar-aoe {
-    @include background(linear-gradient(bottom, $aoe-orange, $aoe-yellow) no-repeat);
+    width: 240px;
+    height: 120px;
+    @include background(white no-repeat);
+    @include box-shadow(0px 1px 8px rgba(0,0,0,.4));
   }
 
   &.right {
@@ -977,6 +1012,16 @@ aside.gdbar {
     bottom: $slide-left-right-padding;
   }
 
+  &.top-right {
+    left: -moz-initial;
+    left: initial;
+    top: -moz-initial;
+    top: initial;
+    top: 0;
+    right: $slide-left-right-padding;
+    @include border-radius(0);
+  }
+
   img {
     height: 85px;
     position: absolute;
@@ -987,7 +1032,7 @@ aside.gdbar {
   &.gdbar-aoe {
       img {
          height: 70px;
-         margin: 11px 15px;
+         margin: 30px 30px;
       }
   }
 }
