@@ -1,8 +1,17 @@
 $social-tags: '#AOEpeople';
 $brand-small-icon-size: 30px;
 
-$aoe-orange: #f78e1a;
-$aoe-orange-light: #ffae0d;
+/* AOE Primary Colors */
+$aoe-orange:     rgba(247, 147, 29, 1); // #F7931D
+$aoe-gray:       rgba(122, 137, 145, 1); // #7A8991
+$aoe-light-gray: rgba(154, 169, 178, 1); // #9AA9B2
+$aoe-white:      rgba(225, 230, 233, 1); // #E1E6E9
+
+/* AOE Secondary Colors */
+$aoe-yellow:     rgba(254, 193, 13, 1); // #FEC10D
+$aoe-dark-gray:  rgba(96, 106, 113, 1); // #606A71
+$aoe-light-blue: rgba(172, 188, 198, 1); // #ACBCC6
+
 $aoe-gray-1: #5b646b;
 $aoe-gray-2: #303539;
 $aoe-gray-3: #7a8790;
@@ -31,7 +40,7 @@ $brand-green-secondary2: #009f5d;
 $slide-width: 1024px;
 $slide-height: 700px;
 $slide-width-widescreen: 1280px;
-$slide-top-bottom-padding: 40px;
+$slide-top-bottom-padding: 60px;
 $slide-left-right-padding: 60px;
 $slide-border-radius: 5px;
 
