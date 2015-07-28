@@ -972,7 +972,6 @@ span.small {
     }
 
     article > p {
-        margin-top: 2em;
         font-size: 20pt;
     }
 
@@ -1026,8 +1025,9 @@ aside.gdbar {
         top: -moz-initial;
         top: initial;
         top: 0;
-        right: $slide-left-right-padding;
+        right: $slide-left-right-padding + 10;
         @include border-radius(0);
+        z-index: 10;
     }
 
     img {
@@ -1049,6 +1049,7 @@ slide:not(.title-slide) > aside.gdbar:not(.gdbar-aoe) {
     width: 85px;
 }
 
+slide.thank-you-slide,
 slide.title-slide {
 
     > hgroup {
@@ -1106,6 +1107,22 @@ slide.title-slide {
             bottom: 65px;
             left: -36px;
         }
+    }
+}
+
+slide.thank-you-slide > hgroup h1 {
+    font-size: 80px;
+    letter-spacing: 3px;
+    padding-left: 29%;
+}
+
+slide.thank-you-slide > article {
+    margin-top: 345px;
+    margin-left: 30%;
+
+    a {
+        //text-decoration: underline;
+        border-bottom: 1px solid rgba(white, 0.5);
     }
 }
 
