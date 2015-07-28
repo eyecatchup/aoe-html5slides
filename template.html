@@ -11,401 +11,482 @@ URL: https://code.google.com/p/io-2012-slides
 <!doctype html>
 <html>
 <head>
-  <title>AOE HTML5 Slide Template</title>
-  <meta charset="utf-8">
+    <title>AOE HTML5 Slide Template</title>
+    <meta charset="utf-8">
 
-  <meta http-equiv="X-UA-Compatible" content="chrome=1">
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
-  <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
-  <!--This one seems to work all the time, but really small on ipad-->
-  <meta name="viewport" content="initial-scale=0.4"><!---->
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <!--This one seems to work all the time, but really small on ipad-->
+    <meta name="viewport" content="initial-scale=0.4"><!---->
 
-  <meta name="mobile-web-app-capable" content="yes">
-  <meta name="application-name" content="AOE HTML5 Slide Template">
-  <meta name="theme-color" content="#000000">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="application-name" content="AOE HTML5 Slide Template">
+    <meta name="theme-color" content="#000000">
 
-  <meta name="apple-mobile-web-app-capable" content="yes">
-  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
-  <meta name="apple-mobile-web-app-title" content="AOE HTML5 Slide Template">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-title" content="AOE HTML5 Slide Template">
 
-  <link rel="stylesheet" media="all" href="theme/css/default.css">
-  <link rel="stylesheet" media="all" href="theme/css/io2013.css">
-  <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
+    <link rel="stylesheet" media="all" href="theme/css/fonts.css">
+    <link rel="stylesheet" media="all" href="theme/css/default.css">
+    <link rel="stylesheet" media="only screen and (max-device-width: 480px)" href="theme/css/phone.css">
 
-  <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
+    <base target="_blank"> <!-- This amazingness opens all links in a new tab. -->
 
-  <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
+    <script data-main="js/slides" src="js/require-1.0.8.min.js"></script>
 </head>
 <body style="opacity: 0" class="aoe-gradient">
 
-<slides class="layout-widescreen">
+    <!-- SlideDeck Wrapper -->
+    <slides class="layout-widescreen">
 
-  <slide data-date class="logoslide nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/AOE-Logo_1c-v-claim.png"></span>
-    </article>
-  </slide>
+        <!-- Cover Slide -->
+        <slide data-date class="logoslide nobackground">
+            <article class="flexbox vcenter">
+                <span><img src="images/AOE-Logo_1c-v-claim.png" /></span>
+            </article>
+        </slide>
 
-  <slide data-date class="title-slide">
-    <hgroup class="auto-fadein">
-      <h1 data-config-title><!-- populated from slide_config.json --></h1>
-      <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
-    </hgroup>
-    <article><p data-config-presenter><!-- populated from slide_config.json --></p></article>
-  </slide>
+        <!-- Title Slide -->
+        <slide data-date class="title-slide">
+            <hgroup class="auto-fadein">
+                <h1 data-config-title><!-- populated from slide_config.json --></h1>
+                <h2 data-config-subtitle><!-- populated from slide_config.json --></h2>
+            </hgroup>
+            <article><p data-config-presenter><!-- populated from slide_config.json --></p></article>
+        </slide>
 
-  <slide data-date class="fill nobackground" style="background-image: url(images/visuals_portfolio.png)">
-    <hgroup class="new-chapter">
-      <h2>Chapter Cover Sheet</h2>
-    </hgroup>
-    <!--<footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>-->
-  </slide>
+        <!-- Chapter Cover Slide #1 (yellow header, full-size background visual) -->
+        <slide data-date class="fill nobackground" style="background-image: url(images/visuals_portfolio.png)">
+            <hgroup class="new-chapter">
+                <h2>Chapter Cover Sheet</h2>
+            </hgroup>
+        </slide>
 
-  <slide data-date class="fill nobackground" style="background-image: url(images/sky.jpg)">
-    <hgroup>
-      <h2 class="white">Full Image (with optional header)</h2>
-    </hgroup>
-    <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
-  </slide>
+        <!-- Chapter Cover Slide #2 (yellow header, badge with logo, text) -->
+        <slide data-date>
+            <aside class="gdbar-aoe gdbar top-right">
+                <img src="images/AOE-Logo_main_v-claim.png" />
+            </aside>
+            <hgroup class="new-chapter">
+                <h2>A new chapter begins</h2>
+            </hgroup>
+            <article>
+                <p><b>Presenter Mode:</b></p>
+                <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
+                This setting is sticky, meaning refreshing the page will persist presenter mode.</p>
+                <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide with Bullets</h2>
-    </hgroup>
-    <article>
-      <ul>
-        <li>Texts are formatted as ClanOT-News</li>
-        <li>Title capitalization is title case
-          <ul>
-            <li>Subtitle capitalization is title case</li>
-          </ul>
-        </li>
-        <li>Subtitle capitalization is title case</li>
-        <li>Titles and subtitles should never have a period at the end</li>
-      </ul>
-    </article>
-  </slide>
+        <!-- (Regular) Slide with full-size background visual -->
+        <slide data-date class="fill nobackground" style="background-image: url(images/sky.jpg)">
+            <hgroup>
+                <h2 class="white">Full Image (with optional header)</h2>
+            </hgroup>
+            <footer class="source white">www.flickr.com/photos/25797459@N06/5438799763/</footer>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide with Bullets that Build</h2>
-    </hgroup>
-    <article>
-      <p>A list where items build:</p>
-      <ul class="build fade">
-        <li>Pressing 'h' highlights code snippets</li>
-        <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
-        <li>Pressing 'f' toggles fullscreen viewing</li>
-        <li>Pressing 'w' toggles widescreen</li>
-        <li>Pressing 'o' toggles overview mode</li>
-        <li>Pressing 'ESC' toggles off these goodies</li>
-      </ul>
-      <p>Another list, but items fade as they build:</p>
-      <ul class="build fade">
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-        <li>Hover over me!</li>
-      </ul>
-    </article>
-  </slide>
+        <!-- Hidden Slide -->
+        <slide hidden>
+            Hidden slides are left out of the presentation.
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide (smaller font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <ul>
-        <li>All <a href="http://google.com">links</a> open in new tabs.</li>
-        <li>To change that this, add <code>target="_self"</code> to the link.</li>
-      </ul>
-    </article>
-  </slide>
+        <!-- Slide with item list -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide with Bullets</h2>
+            </hgroup>
+            <article>
+                <ul>
+                    <li>Texts are formatted as ClanOT-News</li>
+                    <li>Title capitalization is title case
+                    <ul>
+                    <li>Subtitle capitalization is title case</li>
+                    </ul>
+                    </li>
+                    <li>Subtitle capitalization is title case</li>
+                    <li>Titles and subtitles should never have a period at the end</li>
+                </ul>
+            </article>
+        </slide>
 
-  <slide hidden>
-    Hidden slides are left out of the presentation.
-  </slide>
+        <!-- Slide with item lists that "builds" (adds one item after another) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide with Bullets that Build</h2>
+            </hgroup>
+            <article>
+                <p>A list where items build:</p>
+                <ul class="build">
+                    <li>Pressing 'h' highlights code snippets</li>
+                    <li>Pressing 'p' toggles speaker notes (if they're on the current slide)</li>
+                    <li>Pressing 'f' toggles fullscreen viewing</li>
+                    <li>Pressing 'w' toggles widescreen</li>
+                    <li>Pressing 'o' toggles overview mode</li>
+                    <li>Pressing 'ESC' toggles off these goodies</li>
+                </ul>
+                <p>Another list, but items fade as they build:</p>
+                <ul class="build fade">
+                    <li>Hover over me!</li>
+                    <li>Hover over me!</li>
+                    <li>Hover over me!</li>
+                </ul>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Code Slide (with subtitle placeholder)</h2>
-    </hgroup>
-    <article>
-      <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
-      <pre class="prettyprint" data-lang="javascript">
+        <!-- Slide with small font size -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide (smaller font)</h2>
+            </hgroup>
+            <article class="smaller">
+                <ul>
+                    <li>All <a href="http://google.com">links</a> open in new tabs.</li>
+                    <li>To change that this, add <code>target="_self"</code> to the link.</li>
+                </ul>
+            </article>
+        </slide>
+
+        <!-- Code Slide #1 (with code highlighting) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Code Slide (with highlighting)</h2>
+            </hgroup>
+            <article>
+                <p>Press 'h' to highlight important sections of code (wrapped in <code>&lt;b&gt;</code>).</p>
+                <!-- Use the 'data-lang'-attribute to define the
+                     language to be used for syntax highlighting. -->
+                <pre class="prettyprint" data-lang="javascript">
 &lt;script type='text/javascript'&gt;
-  // Say hello world until the user starts questioning
-  // the meaningfulness of their existence.
-  function helloWorld(world) {
-    <b>for (var i = 42; --i &gt;= 0;) {
-      alert('Hello ' + String(world));
-    }</b>
-  }
-&lt;/script&gt;
-</pre>
-    </article>
-  </slide>
+    // Say hello world until the user starts questioning
+    // the meaningfulness of their existence.
+    function helloWorld(world) {
+        <b>for (var i = 42; --i &gt;= 0;) {
+            alert('Hello ' + String(world));
+        }</b>
+    }
+&lt;/script&gt;</pre>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Code Slide (Smaller Font)</h2>
-    </hgroup>
-    <article class="smaller">
-      <pre class="prettyprint" data-lang="javascript">
+        <!-- Code Slide #2 (multiple code blocks, smaller font-size) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Code Slide (Smaller Font)</h2>
+            </hgroup>
+            <article class="smaller">
+                <pre class="prettyprint" data-lang="javascript">
 // Say hello world until the user starts questioning
 // the meaningfulness of their existence.
 function helloWorld(world) {
-  for (var i = 42; --i &gt;= 0;) {
-    alert('Hello ' + String(world));
-  }
-}
-</pre>
-<pre class="prettyprint" data-lang="css">
+    for (var i = 42; --i &gt;= 0;) {
+        alert('Hello ' + String(world));
+    }
+}</pre>
+                <pre class="prettyprint" data-lang="css">
 &lt;style&gt;
-  p { color: pink }
-  b { color: blue }
-&lt;/style&gt;
-</pre>
-<pre class="prettyprint" data-lang="html">
+    p { color: pink }
+    b { color: blue }
+&lt;/style&gt;</pre>
+                <pre class="prettyprint" data-lang="html">
 &lt;!DOCTYPE html>
 &lt;html>
 &lt;head>
-  &lt;title>My Awesome Page&lt;/title>
+    &lt;title>My Awesome Page&lt;/title>
 &lt;/head>
 &lt;body>
-  &lt;p&gt;Hello world&lt;/p&gt;
+    &lt;p&gt;Hello world&lt;/p&gt;
 &lt;body>
-&lt;/html>
-</pre>
-    </article>
-  </slide>
+&lt;/html></pre>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <aside class="gdbar-aoe gdbar top-right"><img src="images/AOE-Logo_main_v-claim.png"></aside>
-    <hgroup class="new-chapter">
-      <h2>A new chapter begins</h2>
-    </hgroup>
-    <article>
-        <p><b>Presenter Mode:</b></p>
-      <p>Add <code><a href="?presentme=true" target="_self">?presentme=true</a></code> to the URL to enabled presenter mode.
-      This setting is sticky, meaning refreshing the page will persist presenter
-      mode.</p>
-      <p>Hit <code><a href="?presentme=false" target="_self">?presentme=false</a></code> to disable presenter mode.</p>
-    </article>
-  </slide>
+        <!-- Slide with speaker note -->
+        <slide data-date>
+            <!-- Hidden speaker note element. Unveil pressing 'p'. Place above hgroup. -->
+            <aside class="note">
+                <section>
+                    <ul>
+                        <li>Point I wanted to make #1</li>
+                        <li>Point I wanted to make #2</li>
+                        <li>Point I wanted to make #3</li>
+                        <li>Example <a href="#">link</a> in notes.</li>
+                    </ul>
+                    <p><b>Remember to say this tag line!</b></p>
+                </section>
+            </aside>
+            <hgroup>
+                <h2>Speaker Notes</h2>
+            </hgroup>
+            <article>
+                <p>Slide with Speaker Notes:</p>
+                <p>Press 'p' to toggle speaker notes.</p>
+            </article>
+        </slide>
 
-  <slide data-date>
-      <aside class="note">
-        <section>
-          <ul>
-            <li>Point I wanted to make #1</li>
-            <li>Point I wanted to make #2</li>
-            <li>Point I wanted to make #3</li>
-            <li>Example <a href="#">link</a> in notes.</li>
-          </ul>
-          <p><b>Remember to say this tag line!</b></p>
-        </section>
-      </aside>
-    <hgroup>
-      <h2>Speaker Notes</h2>
-    </hgroup>
-    <article>
-        <p>Slide with Speaker Notes:</p>
-        <p>Press 'p' to toggle speaker notes.</p>
-    </article>
-  </slide>
+        <!-- Slide with image-effect -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide with Image</h2>
+            </hgroup>
+            <article>
+                <!-- Add a 'reflect' class to add a reflection effect to the image. -->
+                <img src="images/chart.png" class="reflect" alt="Description" title="Description" />
+                <footer class="source">source: place source info here</footer>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide with Image</h2>
-    </hgroup>
-    <article>
-      <img src="images/chart.png" class="reflect" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
+        <!-- Slide with centered image -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide with Image (centered horz/vert)</h2>
+            </hgroup>
+            <article class="flexbox vcenter">
+                <img src="images/barchart.png" alt="Description" title="Description" />
+                <footer class="source">source: place source info here</footer>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide with Image (centered horz/vert)</h2>
-    </hgroup>
-    <article class="flexbox vcenter">
-      <img src="images/barchart.png" alt="Description" title="Description">
-      <footer class="source">source: place source info here</footer>
-    </article>
-  </slide>
+        <!-- Slide with table with column headers #1 -->
+        <slide data-date>
+            <hgroup>
+                <h2>Table Option A</h2>
+            </hgroup>
+            <article>
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                        <th>Column 4</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>placeholder</td>
+                        <td class="highlight">placeholder</td> <!-- highlighted cell -->
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                </table>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Table Option A</h2>
-    </hgroup>
-    <article>
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+        <!-- Slide with table with column headers #2 (smaller font size) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Table Option A (smaller text)</h2>
+            </hgroup>
+            <article class="smaller">
+                <table>
+                    <tr>
+                        <th></th>
+                        <th>Column 1</th>
+                        <th>Column 2</th>
+                        <th>Column 3</th>
+                        <th>Column 4</th>
+                    </tr>
+                    <tr>
+                        <td>Row 1</td>
+                        <td>placeholder</td>
+                        <td class="highlight">placeholder</td> <!-- highlighted cell -->
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 2</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 3</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 4</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <td>Row 5</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                </table>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Table Option A (smaller text)</h2>
-    </hgroup>
-    <article class="smaller">
-      <table>
-        <tr>
-          <th></th><th>Column 1</th><th>Column 2</th><th>Column 3</th><th>Column 4</th>
-        </tr>
-        <tr>
-          <td>Row 1</td><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 2</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 3</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 4</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <td>Row 5</td><td>placeholder</td><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+        <!-- Slide with table with row headers -->
+        <slide data-date>
+            <hgroup>
+                <h2>Table Option B</h2>
+            </hgroup>
+            <article>
+                <table class="rows">
+                    <tr>
+                        <th>Header 1</th>
+                        <td>placeholder</td>
+                        <td class="highlight">placeholder</td> <!-- highlighted cell -->
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <th>Header 2</th>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <th>Header 3</th>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <th>Header 4</th>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                    <tr>
+                        <th>Header 5</th>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                        <td>placeholder</td>
+                    </tr>
+                </table>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Table Option B</h2>
-    </hgroup>
-    <article>
-      <table class="rows">
-        <tr>
-          <th>Header 1</th><td>placeholder</td><td class="highlight">placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 2</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 3</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 4</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-        <tr>
-          <th>Header 5</th><td>placeholder</td><td>placeholder</td><td>placeholder</td>
-        </tr>
-      </table>
-    </article>
-  </slide>
+        <!-- Slide with Slide-Styles (using a column layout) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide Styles (with column layout)</h2>
+            </hgroup>
+            <article class="smaller">
+                <div class="columns-2">
+                    <ul>
+                        <li class="red">class="red"</li>
+                        <li class="red2">class="red2"</li>
+                        <li class="red3">class="red3"</li>
+                        <li class="blue">class="blue"</li>
+                        <li class="blue2">class="blue2"</li>
+                        <li class="blue3">class="blue3"</li>
+                        <li class="green">class="green"</li>
+                        <li class="green2">class="green2"</li>
+                    </ul>
+                    <ul>
+                        <li class="green3">class="green3"</li>
+                        <li class="yellow">class="yellow"</li>
+                        <li class="yellow2">class="yellow2"</li>
+                        <li class="yellow3">class="yellow3"</li>
+                        <li class="gray">class="gray"</li>
+                        <li class="gray2">class="gray2"</li>
+                        <li class="gray3">class="gray3"</li>
+                        <li class="gray4">class="gray4"</li>
+                    </ul>
+                </div>
+                <div class="centered" style="margin-top:2em">
+                    I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
+                </div>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide Styles</h2>
-    </hgroup>
-    <article class="smaller">
-      <div class="columns-2">
-        <ul>
-          <li class="red">class="red"</li>
-          <li class="red2">class="red2"</li>
-          <li class="red3">class="red3"</li>
-          <li class="blue">class="blue"</li>
-          <li class="blue2">class="blue2"</li>
-          <li class="blue3">class="blue3"</li>
-          <li class="green">class="green"</li>
-          <li class="green2">class="green2"</li>
-        </ul>
-        <ul>
-          <li class="green3">class="green3"</li>
-          <li class="yellow">class="yellow"</li>
-          <li class="yellow2">class="yellow2"</li>
-          <li class="yellow3">class="yellow3"</li>
-          <li class="gray">class="gray"</li>
-          <li class="gray2">class="gray2"</li>
-          <li class="gray3">class="gray3"</li>
-          <li class="gray4">class="gray4"</li>
-        </ul>
-      </div>
-      <div class="centered" style="margin-top:2em">
-        I am centered text with a <button>Button</button> and <button disabled>Disabled</button> button.
-      </div>
-    </article>
-  </slide>
+        <!-- Citation Slide (with logo badge) -->
+        <slide data-date class="segue quote nobackground">
+            <aside class="gdbar-aoe gdbar top-right">
+                <img src="images/AOE-Logo_main_v-claim.png" />
+            </aside>
+            <article class="flexbox vleft auto-fadein">
+                <q>
+                    This is an example of quote text.
+                </q>
+                <div class="author">
+                    Name<br>
+                    Company
+                </div>
+            </article>
+        </slide>
 
-  <slide data-date class="segue quote nobackground">
-    <aside class="gdbar-aoe gdbar top-right"><img src="images/AOE-Logo_main_v-claim.png"></aside>
-    <article class="flexbox vleft auto-fadein">
-      <q>
-        This is an example of quote text.
-      </q>
-      <div class="author">
-        Name<br>
-        Company
-      </div>
-    </article>
-  </slide>
+        <!-- Iframe Slide #1 (with header) -->
+        <slide data-date>
+            <hgroup>
+                <h2>Slide with Iframe (with optional header)</h2>
+            </hgroup>
+            <article>
+                <iframe data-src="//www.aoe.com/"></iframe>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <hgroup>
-      <h2>Slide with Iframe (with optional header)</h2>
-    </hgroup>
-    <article>
-      <iframe data-src="//www.aoe.com/"></iframe>
-    </article>
-  </slide>
+        <!-- Iframe Slide #2 (without header) -->
+        <slide data-date>
+            <article>
+                <iframe data-src="//www.aoe.com/"></iframe>
+            </article>
+        </slide>
 
-  <slide data-date>
-    <article>
-      <iframe data-src="//www.aoe.com/"></iframe>
-    </article>
-  </slide>
+        <!-- Thank-You Slide (with contact details) -->
+        <slide data-date class="thank-you-slide">
+            <hgroup class="auto-fadein">
+                <h1>&lt;Thank you!&gt;</h1>
+            </hgroup>
+            <article class="auto-fadein">
+                <p><b>Get in touch</b></p>
+                <p data-config-contact><!-- populated from slide_config.json --></p>
+            </article>
+        </slide>
 
-  <slide data-date class="thank-you-slide">
-      <hgroup class="auto-fadein">
-        <h1>&lt;Thank you!&gt;</h1>
-      </hgroup>
-      <article class="auto-fadein">
-          <p><b>Get in touch</b></p>
-          <p data-config-contact>
-            <!-- populated from slide_config.json -->
-          </p>
-      </article>
-  </slide>
+        <!-- A "DO NOT REMOVE"-SLIDE! -->
+        <slide data-date class="backdrop"></slide>
 
-  <!--<slide class="logoslide nobackground">
-    <article class="flexbox vcenter">
-      <span><img src="images/AOE-Logo_1c-v-claim.png"></span>
-    </article>
-  </slide>-->
+    </slides>
 
-  <slide data-date class="backdrop"></slide>
+    <!--<script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-</slides>
-
-<script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-  ga('create', 'UA-XXXXXXXX-1', 'example.com');
-  ga('send', 'pageview');
-</script>
+        ga('create', 'UA-XXXXXXXX-1', 'example.com');
+        ga('send', 'pageview');
+    </script>-->
 </body>
 </html>
